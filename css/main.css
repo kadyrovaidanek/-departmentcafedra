@@ -1,0 +1,539 @@
+/* main.css */
+
+
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+
+/* Стили для хедера */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-left: 20px; /* Задайте нужный вам отступ слева */
+}
+
+.logo img {
+    width: 100px; /* Устанавливает ширину логотипа */
+    height: auto; /* Сохраняет пропорции */
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+
+nav ul li {
+    margin: 0 15px;
+}
+
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px; /* Увеличенный шрифт */
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+nav ul li a:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+
+/* Дизайн секции hero */
+/* Для фона */
+.hero {
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    background: url('/images/fonchik.jpeg') no-repeat center center/cover;
+    color: #fffafa;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.178); /* Темный оверлей */
+    z-index: 1;
+}
+
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 0; /* Удалить нижний отступ */
+    z-index: 2;
+}
+
+
+.hero hr {
+    width: 50%; /* Настройка ширины по вашему вкусу */
+    border: none; /* Удалить стандартный стиль */
+    border-top: 2px solid #ffffff; /* Добавить верхнюю границу */
+    margin: 10px; /* Удалить верхний и нижний отступ */
+    z-index: 2;
+}
+
+
+.hero p {
+    font-size: 30px;
+    margin-top: 0; /* Удалить верхний отступ */
+    z-index: 2;
+}
+
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+}
+
+
+.scroll-down a {
+    display: block;
+    padding-bottom: 10px;
+    font-size: 25px;
+    color: #D3D3D3;
+    text-decoration: none;
+}
+
+
+/* Дизайн секции section-line */
+/* Для каталога кафедры */
+.section-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.section-line span {
+    margin: 15px 15px;
+}
+
+
+.section-line a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px; /* Увеличенный шрифт */
+    padding: 10px 50px;
+    margin-bottom: 50px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.section-line a:hover {
+    background-color: #323033; /* Темно-фиолетовый для hover */
+    border-radius: 5px;
+}
+
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+
+    .section-line {
+        flex-direction: column;
+    }
+
+
+    .section-line span {
+        margin: 10px 0;
+    }
+}
+
+
+/* Стили для секций о кафедре и истории кафедры */
+/* Стили для секций о кафедре и истории кафедры */
+.about-content, .history-content, .activities-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+
+.about-image img, .activities-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.about-text, .activities-text {
+    max-width: 600px;
+    margin: 20px;
+    text-align: justify;
+}
+
+
+.history-text {
+    text-align: left;
+    margin: 10px 10px;
+    max-width: 1000px;
+}
+
+
+.about-text h2, .history-text h2, .activities-text h2 {
+    color: #000000;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+
+.about-text p, .history-text p, .activities-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+/* Стили для преподавательского состава */
+#faculty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 800px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    position: relative;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    }
+   
+    .myslider {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    }
+    .myslider img {
+    width: 100%; /*Устанавливает ширину изображения на 100% от контейнера /
+    width: 600px; / Ограничивает максимальную ширину /
+    height: 400px; / Устанавливает фиксированную высоту /
+    object-fit: cover; / Обеспечивает обрезку изображения для сохранения пропорций */
+    }
+   
+    .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    color: #3498db;
+    user-select: none;
+    transition: 0.3s;
+    }
+   
+    .prev {
+    left: 10px;
+    }
+   
+    .next {
+    right: 10px;
+    }
+   
+    .prev
+    , .next
+    {
+    color: #216f99;
+    }
+   
+    .dotsbox {
+    text-align: center;
+    margin-top: 20px;
+    }
+   
+    .dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #3498db;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    }
+   
+    .dot
+    {
+    background-color: #3498db;
+    transform: scale(1.2);
+    }
+   
+    /* Показываем первый слайд по умолчанию */
+    .myslider
+    {
+    display: flex;
+    }
+   
+    .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    }
+   
+    @keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+    }
+   
+    .txt {
+    color: #000000;
+    margin-top: 15px;
+    }
+
+
+/* For applicants section */
+#for-applicants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+
+#for-applicants .content {
+    max-width: 600px;
+    margin: 20px;
+}
+
+
+#for-applicants h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+
+#for-applicants p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+#for-applicants .image img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px;
+}
+
+ /* Стили для секции "Деятельность кафедры" */
+/* Стили для секции "Деятельность кафедры" */
+#activities {
+    text-align: center; /* Центрируем содержимое */
+    max-width: 1000px; /* Максимальная ширина контейнера */
+    margin: auto; /* Выравниваем по центру */
+    padding: 40px 500px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#activities p {
+    text-align: left; /* Выравниваем текст в параграфах по левому краю */
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000;
+    text-indent: 0; /* Сбрасываем отступ первой строки */
+}
+
+#activities h2 {
+    font-size: 35px;
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#activities h3 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+#activities .research p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000;
+    margin-bottom: 15px;
+    text-align: left;
+    text-indent: 1.5em;
+    margin: 10px 10px;
+    max-width: 1000px;
+}
+
+#activities .methodical-work,
+#activities .educational-work {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#activities a {
+    color: #007bff;
+    text-decoration: none;
+    border-bottom: 1px dashed #007bff;
+    transition: border-bottom 0.3s ease;
+}
+
+#activities a:hover {
+    border-bottom-style: solid;
+}
+
+.methodical-work a,
+.educational-work a {
+    display: block;
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.methodical-work a:hover,
+.educational-work a:hover {
+    color: #0056b3;
+}
+
+.research,
+.methodical,
+.educational {
+    margin-bottom: 40px;
+}
+
+/* Footer section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+footer .social-icons a img {
+    width: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+
+footer .social-icons a:hover img {
+    transform: scale(1.2);
+}
+
+
+footer .contact-info {
+    margin-top: 20px;
+}
+
+
+footer .contact-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+
+footer .contact-info a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+footer .contact-info a:hover {
+    color: #007bff;
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
