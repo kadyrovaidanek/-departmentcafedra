@@ -243,21 +243,24 @@ nav ul li a:hover {
     margin-bottom: 15px;
 }
 /* Стили для преподавательского состава */
+/* Стили для преподавательского состава */
 #faculty {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 800px;
+    padding: 50px 20px;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
-    position: relative;
+    margin: 20px auto;
     text-align: center;
-    max-width: 800px;
-    margin: auto;
-    }
-   
-    .myslider {
+    max-width: 10000px; /* Увеличиваем максимальную ширину */
+    width: 100%; /* Устанавливаем ширину на 100% */
+    box-sizing: border-box; /* Учитываем padding и border в ширине и высоте элемента */
+    position: relative;
+}
+
+/* Оставляем стили для слайдов */
+.myslider {
     width: 100%;
     max-width: 600px;
     height: auto;
@@ -265,15 +268,15 @@ nav ul li a:hover {
     display: none;
     flex-direction: column;
     align-items: center;
-    }
-    .myslider img {
-    width: 100%; /*Устанавливает ширину изображения на 100% от контейнера /
-    width: 600px; / Ограничивает максимальную ширину /
-    height: 400px; / Устанавливает фиксированную высоту /
-    object-fit: cover; / Обеспечивает обрезку изображения для сохранения пропорций */
-    }
-   
-    .prev, .next {
+}
+
+.myslider img {
+    width: 400px; /* Фиксированная ширина изображения */
+    height: 450px; /* Фиксированная высота изображения */
+    object-fit: cover; /* Обеспечивает обрезку изображения для сохранения пропорций */
+}
+
+.prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -283,28 +286,26 @@ nav ul li a:hover {
     color: #3498db;
     user-select: none;
     transition: 0.3s;
-    }
-   
-    .prev {
-    left: 10px;
-    }
-   
-    .next {
-    right: 10px;
-    }
-   
-    .prev
-    , .next
-    {
+}
+
+.prev {
+    left: 50px;
+}
+
+.next {
+    right: 50px;
+}
+
+.prev, .next {
     color: #216f99;
-    }
-   
-    .dotsbox {
+}
+
+.dotsbox {
     text-align: center;
     margin-top: 20px;
-    }
-   
-    .dot {
+}
+
+.dot {
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -313,34 +314,33 @@ nav ul li a:hover {
     margin: 0 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    }
-   
-    .dot
-    {
+}
+
+.dot.active {
     background-color: #3498db;
     transform: scale(1.2);
-    }
-   
-    /* Показываем первый слайд по умолчанию */
-    .myslider
-    {
+}
+
+/* Показываем первый слайд по умолчанию */
+.myslider:first-child {
     display: flex;
-    }
-   
-    .fade {
+}
+
+.fade {
     animation-name: fade;
     animation-duration: 1.5s;
-    }
-   
-    @keyframes fade {
+}
+
+@keyframes fade {
     from { opacity: 0.4; }
     to { opacity: 1; }
-    }
-   
-    .txt {
+}
+
+.txt {
     color: #000000;
     margin-top: 15px;
-    }
+}
+
 
 
 /* For applicants section */
@@ -377,21 +377,22 @@ nav ul li a:hover {
 
 #for-applicants .image img {
     max-width: 100%;
-    height: auto;
+    height: 600;
+    width: 700px;
     margin: 20px;
 }
 
  /* Стили для секции "Деятельность кафедры" */
-/* Стили для секции "Деятельность кафедры" */
 #activities {
     text-align: center; /* Центрируем содержимое */
-    max-width: 1000px; /* Максимальная ширина контейнера */
+    max-width: 10000px; /* Максимальная ширина контейнера */
     margin: auto; /* Выравниваем по центру */
-    padding: 40px 500px;
+    padding: 40px 20px; /* Внутренние отступы */
     background-color: #f9f9f9;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     border-radius: 8px;
+    box-sizing: border-box; /* Учитываем отступы и границы в общей ширине */
 }
 
 #activities p {
@@ -419,15 +420,26 @@ nav ul li a:hover {
     padding-bottom: 10px;
 }
 
+#activities .research,
+#activities .methodical,
+#activities .educational {
+    margin-bottom: 40px; /* Внешние отступы снизу */
+}
+
+.research {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем содержимое по горизонтали */
+    padding: 50px 0;
+    margin: 20px 0;
+}
+
 #activities .research p {
     font-size: 18px;
     line-height: 1.6;
-    color: #000;
     margin-bottom: 15px;
-    text-align: left;
-    text-indent: 1.5em;
-    margin: 10px 10px;
-    max-width: 1000px;
+    max-width: 800px; /* Максимальная ширина параграфа */
+    text-align: left; /* Выровняем текст по левому краю */
 }
 
 #activities .methodical-work,
@@ -462,11 +474,6 @@ nav ul li a:hover {
     color: #0056b3;
 }
 
-.research,
-.methodical,
-.educational {
-    margin-bottom: 40px;
-}
 
 /* Footer section */
 footer {
