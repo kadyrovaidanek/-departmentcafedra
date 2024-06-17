@@ -13,13 +13,14 @@ body {
 
 /* Стили для хедера */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color:#ffffff;;
+    color: #000000;
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 70px;
 }
 
 .logo {
@@ -55,7 +56,7 @@ nav ul li {
 
 
 nav ul li a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     font-size: 18px; /* Увеличенный шрифт */
     padding: 5px 10px;
@@ -64,7 +65,7 @@ nav ul li a {
 
 
 nav ul li a:hover {
-    background-color: #333;
+    background-color: #007bff97;
     border-radius: 5px;
 }
 
@@ -74,7 +75,7 @@ nav ul li a:hover {
 .hero {
     position: relative;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
+    font-size: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -144,8 +145,8 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #333;
-    color: #fff;
+    background-color: #ffffff;;
+    color: #000000;
     padding: 10px 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -157,7 +158,7 @@ nav ul li a:hover {
 
 
 .section-line a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     font-size: 18px; /* Увеличенный шрифт */
     padding: 10px 50px;
@@ -167,7 +168,7 @@ nav ul li a:hover {
 
 
 .section-line a:hover {
-    background-color: #323033; /* Темно-фиолетовый для hover */
+    background-color: #007bff97;
     border-radius: 5px;
 }
 
